@@ -24,8 +24,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       workbox: {
         cleanupOutdatedCaches: true,
+        ignoreURLParametersMatching: [/^[0-9a-zA-z]*$/],
         globPatterns: [
-          '**/*.{js,css,html,mp3,woff,eot,ttf,woff2,ico,png,jpg,jpeg,svg,gif}'
+          '**/*.{js,css,html,mp3,woff,eot,ttf,woff2,ico,png,jpg,jpeg,svg,gif}**'
         ]
       },
       manifest: {
@@ -33,7 +34,7 @@ export default defineConfig({
         name: 'Pomodoro',
         short_name: 'Pomodoro',
         // APP 說明
-        description: 'Pomodoro',
+        description: 'Vite Vuetify Pomodoro',
         // APP 主題顏色
         theme_color: '#42b883',
         background_color: '#42b883',
